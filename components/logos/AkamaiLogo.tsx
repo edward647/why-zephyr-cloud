@@ -1,22 +1,24 @@
 export default function AkamaiLogo({ className = "h-12 w-auto" }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 200 60"
+      viewBox="0 0 300 100"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      fill="none"
     >
-      <rect width="200" height="60" fill="#0096D6" rx="4" />
-      <text
-        x="100"
-        y="38"
-        fontFamily="Arial, sans-serif"
-        fontSize="22"
-        fontWeight="bold"
-        fill="white"
-        textAnchor="middle"
-      >
-        Akamai
-      </text>
+      <g>
+        <path d="M20 30 L35 60 L50 30 M35 45 L50 45" stroke="#0096D6" strokeWidth="3" fill="none"/>
+        <text
+          x="65"
+          y="52"
+          fontFamily="system-ui, -apple-system, sans-serif"
+          fontSize="32"
+          fontWeight="600"
+          fill="#0096D6"
+        >
+          Akamai
+        </text>
+      </g>
     </svg>
   );
 }

@@ -4,21 +4,12 @@ export default function RspackLogo({ className = "h-12 w-12" }: { className?: st
       viewBox="0 0 200 200"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      fill="currentColor"
+      fill="none"
     >
-      <path d="M100 20L180 60v80l-80 40-80-40V60z" fill="#4A90E2" />
-      <path d="M100 20v160l80-40V60z" fill="#5BA3F5" opacity="0.8" />
-      <text
-        x="100"
-        y="110"
-        fontFamily="Arial, sans-serif"
-        fontSize="60"
-        fontWeight="bold"
-        fill="white"
-        textAnchor="middle"
-      >
-        R
-      </text>
+      <rect width="200" height="200" fill="#1E1E1E" rx="20"/>
+      <g transform="translate(40, 50)">
+        <path d="M0 0 L60 0 C80 0 95 15 95 35 C95 50 85 60 70 62 L100 100 L70 100 L42 64 L30 64 L30 100 L0 100 Z M30 25 L30 45 L55 45 C62 45 65 42 65 35 C65 28 62 25 55 25 Z" fill="#FFD700"/>
+      </g>
     </svg>
   );
 }
