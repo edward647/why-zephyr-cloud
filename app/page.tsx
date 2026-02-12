@@ -1,9 +1,7 @@
 import {
-  Globe,
   CheckCircle2,
   Terminal,
   Users,
-  Gauge,
   ArrowRight,
 } from "lucide-react";
 import ZephyrLogo from "@/components/logos/ZephyrLogo";
@@ -16,6 +14,10 @@ import FastlyLogo from "@/components/logos/FastlyLogo";
 import AkamaiLogo from "@/components/logos/AkamaiLogo";
 import AWSLogo from "@/components/logos/AWSLogo";
 import VercelLogo from "@/components/logos/VercelLogo";
+import VelocityChart from "@/components/VelocityChart";
+import EdgeGlobe from "@/components/EdgeGlobe";
+import DashboardMockup from "@/components/DashboardMockup";
+import RollbackMockup from "@/components/RollbackMockup";
 
 export default function Home() {
   return (
@@ -85,29 +87,7 @@ export default function Home() {
               Velocity isn&apos;t the issue. Dependency is.
             </p>
 
-            <div className="rounded-lg border border-border bg-card p-8">
-              <div className="grid grid-cols-9 gap-2">
-                {Array.from({ length: 9 }).map((_, month) => (
-                  <div key={month} className="space-y-1">
-                    <div className="text-xs text-muted-foreground">
-                      {["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"][month]}
-                    </div>
-                    {Array.from({ length: 15 }).map((_, day) => (
-                      <div
-                        key={day}
-                        className={`h-2 w-2 rounded-sm ${
-                          Math.random() > 0.6
-                            ? "bg-primary"
-                            : Math.random() > 0.3
-                            ? "bg-destructive"
-                            : "bg-muted"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                ))}
-              </div>
-            </div>
+            <VelocityChart />
 
             <p className="pt-2 text-base leading-relaxed">
               Zephyr Cloud enhances and accelerates the SDLC
@@ -271,25 +251,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="relative flex items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-primary/20 via-background to-background p-12">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--primary)_0%,_transparent_70%)] opacity-20" />
-              <Globe className="h-48 w-48 text-primary opacity-50" />
-              <div className="absolute inset-0">
-                {Array.from({ length: 8 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute h-px bg-gradient-to-r from-transparent via-primary to-transparent"
-                    style={{
-                      top: `${20 + i * 10}%`,
-                      left: "10%",
-                      right: "10%",
-                      transform: `rotate(${i * 15}deg)`,
-                      opacity: 0.3,
-                    }}
-                  />
-                ))}
-              </div>
-            </div>
+            <EdgeGlobe />
           </div>
         </div>
 
@@ -403,25 +365,7 @@ export default function Home() {
               deployed version already live at the edge.
             </p>
 
-            <div className="rounded-xl border border-border bg-gradient-to-br from-card via-primary/5 to-card p-12">
-              <div className="flex flex-col items-center gap-4 text-center">
-                <div className="rounded-full bg-primary/10 p-6">
-                  <Gauge className="h-12 w-12 text-primary" />
-                </div>
-                <div>
-                  <p className="text-lg font-semibold">
-                    Rollback in seconds,
-                  </p>
-                  <p className="text-lg font-semibold">no rebuild needed.</p>
-                </div>
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
-                >
-                  Learn more <ArrowRight className="h-4 w-4" />
-                </a>
-              </div>
-            </div>
+            <RollbackMockup />
           </div>
 
           {/* How Teams Use Zephyr */}
@@ -475,19 +419,7 @@ export default function Home() {
               No new approval chains. No additional release meetings.
             </p>
 
-            <div className="rounded-xl border border-border bg-gradient-to-br from-primary/5 via-card to-card p-12">
-              <div className="grid grid-cols-3 gap-3">
-                {Array.from({ length: 12 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className="h-16 rounded-lg border border-border bg-secondary/50"
-                  />
-                ))}
-              </div>
-              <p className="mt-6 text-center text-sm text-primary">
-                Dashboard UI Preview
-              </p>
-            </div>
+            <DashboardMockup />
 
             <p className="text-sm text-muted-foreground">
               Zephyr provides both{" "}
