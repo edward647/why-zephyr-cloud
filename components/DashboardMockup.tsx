@@ -1,3 +1,5 @@
+"use client";
+
 export default function DashboardMockup() {
   return (
     <div className="rounded-xl border border-border bg-gradient-to-br from-primary/5 via-card to-card p-8">

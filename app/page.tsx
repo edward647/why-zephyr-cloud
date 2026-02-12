@@ -3,6 +3,7 @@ import {
   Terminal,
   Users,
   ArrowRight,
+  Globe,
 } from "lucide-react";
 import ZephyrLogo from "@/components/logos/ZephyrLogo";
 import WebpackLogo from "@/components/logos/WebpackLogo";
