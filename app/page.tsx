@@ -1,65 +1,674 @@
-import Image from "next/image";
+import {
+  Globe,
+  CheckCircle2,
+  Terminal,
+  Users,
+  Gauge,
+  ArrowRight,
+} from "lucide-react";
+import ZephyrLogo from "@/components/logos/ZephyrLogo";
+import WebpackLogo from "@/components/logos/WebpackLogo";
+import ViteLogo from "@/components/logos/ViteLogo";
+import RspackLogo from "@/components/logos/RspackLogo";
+import HonoLogo from "@/components/logos/HonoLogo";
+import CloudflareLogo from "@/components/logos/CloudflareLogo";
+import FastlyLogo from "@/components/logos/FastlyLogo";
+import AkamaiLogo from "@/components/logos/AkamaiLogo";
+import AWSLogo from "@/components/logos/AWSLogo";
+import VercelLogo from "@/components/logos/VercelLogo";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen bg-background text-foreground">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        {/* Logo */}
+        <div className="mb-12">
+          <ZephyrLogo className="h-12 w-12 text-primary" />
+        </div>
+
+        {/* Header */}
+        <div className="mb-20">
+          <h1 className="mb-6 text-5xl font-bold tracking-tight lg:text-7xl">
+            Why choose Zephyr Cloud?
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-xl text-muted-foreground lg:text-2xl">
+            <span className="font-semibold text-foreground">Ship Faster.</span>{" "}
+            Reduce Release Risk.{" "}
+            <span className="font-semibold text-foreground">
+              Scale Without Coordination Overhead.
+            </span>
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+
+        {/* Two Column Section: Problem & Solution */}
+        <div className="mb-24 grid gap-16 lg:grid-cols-2">
+          {/* Left: The Problem */}
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold tracking-tight lg:text-4xl">
+              The Problem Managers Actually Face
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Engineering teams don't struggle with building software. They
+              struggle with{" "}
+              <span className="font-semibold text-foreground">
+                release coordination, rollback risk, and operational friction
+              </span>{" "}
+              as systems and teams scale.
+            </p>
+
+            <div className="space-y-4">
+              <p className="flex items-center gap-2 text-sm font-medium text-primary">
+                <CheckCircle2 className="h-5 w-5" /> Typical symptoms:
+              </p>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Deployments blocked by cross-team timing
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Risky or slow rollbacks
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Growing CI/CD and tooling complexity
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Increasing time spent managing releases instead of shipping
+                  value
+                </li>
+              </ul>
+            </div>
+
+            <p className="text-lg font-semibold">
+              Velocity isn&apos;t the issue. Dependency is.
+            </p>
+
+            <div className="rounded-lg border border-border bg-card p-8">
+              <div className="grid grid-cols-9 gap-2">
+                {Array.from({ length: 9 }).map((_, month) => (
+                  <div key={month} className="space-y-1">
+                    <div className="text-xs text-muted-foreground">
+                      {["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"][month]}
+                    </div>
+                    {Array.from({ length: 15 }).map((_, day) => (
+                      <div
+                        key={day}
+                        className={`h-2 w-2 rounded-sm ${
+                          Math.random() > 0.6
+                            ? "bg-primary"
+                            : Math.random() > 0.3
+                            ? "bg-destructive"
+                            : "bg-muted"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <p className="text-sm">
+              Zephyr Cloud enhances and accelerates the SDLC
+            </p>
+            <a
+              href="#"
+              className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+            >
+              Learn more <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+
+          {/* Right: What Zephyr Changes */}
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold tracking-tight lg:text-4xl">
+              What Zephyr Cloud Changes
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Zephyr Cloud is a{" "}
+              <span className="font-semibold text-foreground">
+                managed deployment and release control platform
+              </span>{" "}
+              that removes the need for tight cross-team coordination—without
+              changing how teams build.
+            </p>
+
+            <div className="space-y-4">
+              <p className="flex items-center gap-2 text-sm font-medium text-primary">
+                <CheckCircle2 className="h-5 w-5" /> With Zephyr:
+              </p>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Teams deploy independently
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Releases are incremental, not all-or-nothing
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Rollback and roll-forward are instant
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Deployment logic is centralized and observable
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Scaling teams reduces friction instead of increasing it
+                </li>
+              </ul>
+            </div>
+
+            <p className="text-lg text-muted-foreground">
+              Zephyr acts as the{" "}
+              <span className="font-semibold text-foreground">
+                deployment platform
+              </span>
+              , not just middleware between the client and a CDN.
+            </p>
+
+            <div className="flex items-center gap-6">
+              <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-white p-2">
+                <ViteLogo className="h-10 w-10" />
+              </div>
+              <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-white p-2">
+                <RspackLogo className="h-10 w-10" />
+              </div>
+              <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-white p-2">
+                <WebpackLogo className="h-10 w-10" />
+              </div>
+              <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-white p-2">
+                <HonoLogo className="h-10 w-10" />
+              </div>
+              <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-primary/60 p-2">
+                <Globe className="h-7 w-7 text-primary-foreground" />
+              </div>
+            </div>
+
+            <p className="text-sm text-muted-foreground">
+              Zephyr integrates with popular bundlers Webpack, Rspack, Vite to
+              provide global distribution of web applications.
+            </p>
+            <a
+              href="#"
+              className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+            >
+              Learn more <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+
+        {/* Edge Deployment Feature Box */}
+        <div className="mb-24 rounded-2xl border border-border bg-card p-10 lg:p-16">
+          <h2 className="mb-4 text-3xl font-bold tracking-tight lg:text-4xl">
+            Why Edge Deployment Matters
+            <span className="block text-xl font-normal text-muted-foreground lg:text-2xl">
+              (Latency, Performance, User Experience)
+            </span>
+          </h2>
+
+          <div className="mt-12 grid gap-12 lg:grid-cols-2">
+            <div className="space-y-6">
+              <p className="text-lg text-muted-foreground">
+                Modern user experiences are increasingly sensitive to latency.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                Every additional network hop adds delay, increases failure
+                surface area, and degrades perceived performance.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                Zephyr Cloud deploys applications{" "}
+                <span className="font-semibold text-foreground">
+                  directly to the edge
+                </span>
+                , ensuring content and application logic are served as close to
+                users as possible.
+              </p>
+              <p className="text-lg text-muted-foreground">
+                By deploying at the edge, Zephyr removes the performance penalty
+                typically introduced by centralized deployment models—without
+                requiring teams to redesign their applications.
+              </p>
+
+              <div className="space-y-4 pt-6">
+                <p className="flex items-center gap-2 text-sm font-medium text-primary">
+                  <CheckCircle2 className="h-5 w-5" /> Typical symptoms:
+                </p>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex gap-3">
+                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                    Ultra-low latency by reducing round trips to centralized
+                    servers
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                    Faster initial load times and interactions
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                    More consistent performance across geographies
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                    Improved reliability by distributing execution closer to
+                    users
+                  </li>
+                </ul>
+              </div>
+
+              <p className="pt-4 text-lg font-semibold">
+                Edge deployment is not an optimization layer. It is the default
+                execution model.
+              </p>
+              <a
+                href="#"
+                className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+              >
+                Learn more <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+
+            <div className="relative flex items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-primary/20 via-background to-background p-12">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--primary)_0%,_transparent_70%)] opacity-20" />
+              <Globe className="h-48 w-48 text-primary opacity-50" />
+              <div className="absolute inset-0">
+                {Array.from({ length: 8 }).map((_, i) => (
+                  <div
+                    key={i}
+                    className="absolute h-px bg-gradient-to-r from-transparent via-primary to-transparent"
+                    style={{
+                      top: `${20 + i * 10}%`,
+                      left: "10%",
+                      right: "10%",
+                      transform: `rotate(${i * 15}deg)`,
+                      opacity: 0.3,
+                    }}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Command Block */}
+        <div className="mb-12 rounded-lg border border-border bg-card p-6">
+          <div className="flex items-center justify-between">
+            <code className="flex items-center gap-2 font-mono text-sm">
+              <Terminal className="h-4 w-4 text-primary" />
+              <span className="text-muted-foreground">$</span> npx
+              create-zephyr-apps@latest
+            </code>
+            <button className="rounded-md border border-border bg-secondary px-3 py-1 text-xs text-secondary-foreground hover:bg-secondary/80">
+              press to copy
+            </button>
+          </div>
+        </div>
+
+        <p className="mb-4 text-center text-lg">
+          Zephyr provides{" "}
+          <span className="font-semibold text-foreground">
+            production-ready deployment orchestration out of the box
+          </span>{" "}
+          without adding internal platform overhead.
+        </p>
+        <div className="mb-24 text-center">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#"
+            className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            Learn more <ArrowRight className="h-4 w-4" />
           </a>
         </div>
-      </main>
+
+        {/* Why Not Build In-House */}
+        <div className="mb-24 space-y-6">
+          <h2 className="text-3xl font-bold tracking-tight lg:text-4xl">
+            Why Not Build This In-House?
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Internal deployment systems become a permanent platform tax.
+          </p>
+
+          <div className="space-y-4">
+            <p className="flex items-center gap-2 text-sm font-medium text-primary">
+              <CheckCircle2 className="h-5 w-5" /> Those systems can:
+            </p>
+            <ul className="space-y-3 text-muted-foreground">
+              <li className="flex gap-3">
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                Accumulate edge cases over time
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                Require ongoing ownership and maintenance
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                Compete with core product priorities
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                Rarely reach the maturity needed for safe, fast recovery
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* PAGE 2 CONTENT */}
+
+        {/* Release Management & How Teams Use */}
+        <div className="mb-24 grid gap-16 lg:grid-cols-2">
+          {/* Release Management */}
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold tracking-tight lg:text-4xl">
+              Release Management & Risk
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Zephyr does not replace release governance — it significantly
+              reduces operational load.
+            </p>
+
+            <div className="space-y-4">
+              <p className="flex items-center gap-2 text-sm font-medium text-primary">
+                <CheckCircle2 className="h-5 w-5" /> Typical symptoms:
+              </p>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Every deployment automatically creates a version
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Deployments can be{" "}
+                  <span className="font-semibold text-foreground">
+                    tagged and promoted across environments
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Rollback and roll-forward are traffic switches, not rebuilds
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Failed releases are isolated instead of cascading
+                </li>
+              </ul>
+            </div>
+
+            <p className="text-sm text-muted-foreground">
+              Instant rollback is achieved by switching traffic to a previously
+              deployed version already live at the edge.
+            </p>
+
+            <div className="rounded-xl border border-border bg-gradient-to-br from-card via-primary/5 to-card p-12">
+              <div className="flex flex-col items-center gap-4 text-center">
+                <div className="rounded-full bg-primary/10 p-6">
+                  <Gauge className="h-12 w-12 text-primary" />
+                </div>
+                <div>
+                  <p className="text-lg font-semibold">
+                    Rollback in seconds,
+                  </p>
+                  <p className="text-lg font-semibold">no rebuild needed.</p>
+                </div>
+                <a
+                  href="#"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+                >
+                  Learn more <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* How Teams Use Zephyr */}
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold tracking-tight lg:text-4xl">
+              How Teams Use Zephyr
+            </h2>
+
+            <div className="space-y-6">
+              <div>
+                <h3 className="mb-3 flex items-center gap-2 text-xl font-semibold">
+                  <Terminal className="h-5 w-5 text-primary" /> Engineering
+                  teams
+                </h3>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex gap-3">
+                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                    CLI-first workflows
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                    Integrates with existing CI/CD pipelines
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                    No framework or bundler lock-in (supports Hono and more)
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="mb-3 flex items-center gap-2 text-xl font-semibold">
+                  <Users className="h-5 w-5 text-primary" /> Managers & IT
+                  leaders
+                </h3>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li className="flex gap-3">
+                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                    Central UI dashboard for visibility into deployments,
+                    versions, environments, and rollback readiness
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                    Clear auditability without direct pipeline access
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p className="text-lg font-semibold">
+              No new approval chains. No additional release meetings.
+            </p>
+
+            <div className="rounded-xl border border-border bg-gradient-to-br from-primary/5 via-card to-card p-12">
+              <div className="grid grid-cols-3 gap-3">
+                {Array.from({ length: 12 }).map((_, i) => (
+                  <div
+                    key={i}
+                    className="h-16 rounded-lg border border-border bg-secondary/50"
+                  />
+                ))}
+              </div>
+              <p className="mt-6 text-center text-sm text-primary">
+                Dashboard UI Preview
+              </p>
+            </div>
+
+            <p className="text-sm text-muted-foreground">
+              Zephyr provides both{" "}
+              <span className="font-semibold text-foreground">
+                CLI and UI workflows
+              </span>{" "}
+              so teams can work how they want.
+            </p>
+            <a
+              href="#"
+              className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+            >
+              Learn more <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+
+        {/* Enterprise Ready */}
+        <div className="mb-24 grid gap-16 lg:grid-cols-2">
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold tracking-tight lg:text-4xl">
+              Enterprise-Ready
+              <span className="block">by Design</span>
+            </h2>
+
+            <div className="space-y-4">
+              <p className="flex items-center gap-2 text-sm font-medium text-primary">
+                <CheckCircle2 className="h-5 w-5" /> Typical symptoms:
+              </p>
+              <ul className="space-y-3 text-muted-foreground">
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Regional hosting strategies (EU, US, APAC) supported via
+                  bring-your-own cloud and CDN configuration
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Akamai CDN fully supported and configurable
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Cloud-agnostic architecture
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Poly-cloud deployment supported, enabling simultaneous
+                  deployment across providers
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Roadmap for on-prem and hybrid environments
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Flat, organization-level pricing above ~20 users
+                </li>
+              </ul>
+            </div>
+
+            <p className="text-xs text-muted-foreground">
+              A user is someone actively deploying or managing via Zephyr—not
+              everyone with repository access.
+            </p>
+
+            <p className="text-lg">
+              <span className="font-semibold text-foreground">
+                Primary cost savings come from reduced engineering overhead,
+                faster feedback cycles, and lower release risk
+              </span>
+              —not raw CDN cost reduction alone.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { name: "Cloudflare", status: "Available", Logo: CloudflareLogo },
+                { name: "Fastly", status: "Available", Logo: FastlyLogo },
+                { name: "fastly", status: "Available", Logo: FastlyLogo },
+                { name: "Akamai", status: "Available", Logo: AkamaiLogo },
+                { name: "AWS", status: "Available", Logo: AWSLogo },
+                { name: "Vercel", status: "Coming soon", Logo: VercelLogo },
+              ].map((provider) => (
+                <div
+                  key={provider.name}
+                  className="relative flex min-h-[120px] flex-col items-center justify-center rounded-lg border border-border bg-card p-6"
+                >
+                  <provider.Logo className="h-8 w-auto" />
+                  <div
+                    className={`absolute bottom-4 flex items-center gap-1 text-xs ${
+                      provider.status === "Available"
+                        ? "text-green-500"
+                        : "text-muted-foreground"
+                    }`}
+                  >
+                    {provider.status === "Available" ? (
+                      <CheckCircle2 className="h-3 w-3" />
+                    ) : (
+                      <span>⏱</span>
+                    )}{" "}
+                    {provider.status}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-center text-sm">
+              <span className="font-semibold text-foreground">BYOC:</span> Bring
+              your infrastructure, keep control.{" "}
+              <a
+                href="#"
+                className="inline-flex items-center gap-1 font-medium text-primary hover:underline"
+              >
+                Learn more <ArrowRight className="h-4 w-4" />
+              </a>
+            </p>
+          </div>
+        </div>
+
+        {/* The Manager Outcome */}
+        <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-background via-primary/5 to-background p-16">
+          <div className="absolute right-16 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-primary/20 blur-3xl" />
+
+          <div className="relative space-y-8">
+            <h2 className="text-3xl font-bold tracking-tight lg:text-4xl">
+              The Manager
+              <span className="block">Outcome</span>
+            </h2>
+
+            <div className="space-y-4">
+              <p className="flex items-center gap-2 text-sm font-medium text-primary">
+                <CheckCircle2 className="h-5 w-5" /> Managers gain:
+              </p>
+              <ul className="space-y-3 text-lg text-muted-foreground">
+                <li className="flex gap-3">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Faster, more predictable releases
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Lower rollback and outage risk
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Less coordination overhead
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Teams that scale without slowing delivery
+                </li>
+                <li className="flex gap-3">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Reduced long-term operational cost vs. custom tooling
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-2 pt-4">
+              <p className="text-lg font-semibold">
+                Zephyr doesn&apos;t change how teams build.
+              </p>
+              <p className="text-lg font-semibold">
+                It removes structural friction from how they ship.
+              </p>
+            </div>
+
+            <a
+              href="#"
+              className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+            >
+              Learn more <ArrowRight className="h-4 w-4" />
+            </a>
+
+            <p className="pt-8 text-right text-sm text-muted-foreground">
+              Purpose-built for enterprise release velocity
+              <br />
+              and risk reduction.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
