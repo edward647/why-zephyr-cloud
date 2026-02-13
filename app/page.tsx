@@ -31,12 +31,10 @@ export default function Home() {
           <h1 className="mb-8 text-6xl font-medium leading-tight tracking-tight lg:text-8xl">
             Why choose Zephyr Cloud?
           </h1>
-          <p className="text-2xl leading-relaxed lg:text-3xl">
-            <span className="font-bold text-foreground">Ship Faster.</span>{" "}
+          <p className="text-2xl font-medium leading-relaxed lg:text-3xl">
+            Ship Faster.{" "}
             <span className="text-muted-foreground">Reduce Release Risk.</span>{" "}
-            <span className="font-bold text-foreground">
-              Scale Without Coordination Overhead.
-            </span>
+            Scale Without Coordination Overhead.
           </p>
         </div>
 
@@ -44,7 +42,7 @@ export default function Home() {
         <div className="mb-32 grid gap-20 lg:grid-cols-2">
           {/* Left: The Problem */}
           <div className="space-y-7">
-            <h2 className="text-4xl font-medium leading-tight tracking-tight lg:text-5xl">
+            <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
               The Problem Managers Actually Face
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
@@ -81,7 +79,7 @@ export default function Home() {
               </ul>
             </div>
 
-            <p className="pt-2 text-xl font-bold leading-relaxed">
+            <p className="pt-2 text-base leading-relaxed">
               Velocity isn&apos;t the issue. Dependency is.
             </p>
 
@@ -100,7 +98,7 @@ export default function Home() {
 
           {/* Right: What Zephyr Changes */}
           <div className="space-y-7">
-            <h2 className="text-4xl font-medium leading-tight tracking-tight lg:text-5xl">
+            <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
               What Zephyr Cloud Changes
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
@@ -180,10 +178,10 @@ export default function Home() {
         </div>
 
         {/* Edge Deployment Feature Box */}
-        <div className="mb-32 rounded-2xl border border-border bg-card p-12 lg:p-20">
-          <h2 className="mb-2 text-4xl font-medium leading-tight tracking-tight lg:text-5xl">
+        <div className="mb-32 rounded-md border border-gray-700 p-12 lg:p-20">
+          <h2 className="mb-2 text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
             Why Edge Deployment Matters
-            <span className="mt-2 block text-2xl font-normal leading-relaxed text-muted-foreground lg:text-3xl">
+            <span className="block text-2xl font-normal leading-relaxed text-foreground lg:text-3xl">
               (Latency, Performance, User Experience)
             </span>
           </h2>
@@ -237,7 +235,7 @@ export default function Home() {
                 </ul>
               </div>
 
-              <p className="pt-4 text-xl font-bold leading-relaxed">
+              <p className="pt-4 text-base leading-relaxed">
                 Edge deployment is not an optimization layer. It is the default
                 execution model.
               </p>
@@ -254,7 +252,7 @@ export default function Home() {
         </div>
 
         {/* Command Block */}
-        <div className="mb-16 rounded-lg border border-border bg-card p-8">
+        <div className="mb-32 rounded-lg border border-border bg-card p-8">
           <div className="flex items-center justify-between">
             <code className="flex items-center gap-2 font-mono text-base">
               <Terminal className="h-5 w-5 text-primary" />
@@ -285,7 +283,7 @@ export default function Home() {
 
         {/* Why Not Build In-House */}
         <div className="mb-32 space-y-7">
-          <h2 className="text-4xl font-medium leading-tight tracking-tight lg:text-5xl">
+          <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
             Why Not Build This In-House?
           </h2>
           <p className="text-lg leading-relaxed text-muted-foreground">
@@ -296,7 +294,7 @@ export default function Home() {
             <p className="flex items-center gap-2 text-base font-medium text-primary">
               <CheckCircle2 className="h-5 w-5" /> Those systems can:
             </p>
-            <ul className="space-y-4 text-base text-muted-foreground">
+            <ul className="space-y-7 text-base text-muted-foreground">
               <li className="flex gap-3 leading-relaxed">
                 <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                 Accumulate edge cases over time
@@ -323,7 +321,7 @@ export default function Home() {
         <div className="mb-32 grid gap-20 lg:grid-cols-2">
           {/* Release Management */}
           <div className="space-y-7">
-            <h2 className="text-4xl font-medium leading-tight tracking-tight lg:text-5xl">
+            <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
               Release Management & Risk
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
@@ -368,11 +366,11 @@ export default function Home() {
 
           {/* How Teams Use Zephyr */}
           <div className="space-y-7">
-            <h2 className="text-4xl font-medium leading-tight tracking-tight lg:text-5xl">
+            <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
               How Teams Use Zephyr
             </h2>
 
-            <div className="space-y-8">
+            <div className="space-y-7">
               <div>
                 <h3 className="mb-4 flex items-center gap-2 text-2xl font-semibold leading-tight">
                   <Terminal className="h-6 w-6 text-primary" /> Engineering
@@ -413,11 +411,17 @@ export default function Home() {
               </div>
             </div>
 
-            <p className="pt-2 text-xl font-bold leading-relaxed">
+            <p className="pt-2 text-base leading-relaxed">
               No new approval chains. No additional release meetings.
             </p>
 
-            <DashboardMockup />
+            <div className="rounded-xl border border-border bg-gradient-to-br from-primary/5 via-card to-card p-8">
+              <img
+                src="/How-teams-use-zephyr.svg"
+                alt="Dashboard UI showing how teams use Zephyr"
+                className="w-full h-auto"
+              />
+            </div>
 
             <p className="text-sm text-muted-foreground">
               Zephyr provides both{" "}
@@ -438,7 +442,7 @@ export default function Home() {
         {/* Enterprise Ready */}
         <div className="mb-32 grid gap-20 lg:grid-cols-2">
           <div className="space-y-7">
-            <h2 className="text-4xl font-medium leading-tight tracking-tight lg:text-5xl">
+            <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
               Enterprise-Ready
               <span className="block">by Design</span>
             </h2>
@@ -482,16 +486,17 @@ export default function Home() {
               everyone with repository access.
             </p>
 
-            <p className="text-lg leading-relaxed">
+            <p className="text-base leading-relaxed">
+              <span className="text-muted-foreground">Primary cost savings come from</span>{" "}
               <span className="font-semibold text-foreground">
-                Primary cost savings come from reduced engineering overhead,
+                reduced engineering overhead,
                 faster feedback cycles, and lower release risk
-              </span>
-              —not raw CDN cost reduction alone.
+              </span>{" "}
+              <span className="text-muted-foreground">—not raw CDN cost reduction alone.</span>
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-5">
             <div className="grid grid-cols-2 gap-4">
               {[
                 { name: "Cloudflare", status: "Available", Logo: CloudflareLogo },
@@ -542,12 +547,12 @@ export default function Home() {
           <div className="absolute right-16 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-primary/20 blur-3xl" />
 
           <div className="relative space-y-10">
-            <h2 className="text-4xl font-medium leading-tight tracking-tight lg:text-5xl">
+            <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
               The Manager
               <span className="block">Outcome</span>
             </h2>
 
-            <div className="space-y-6">
+            <div className="space-y-5">
               <p className="flex items-center gap-2 text-base font-medium text-primary">
                 <CheckCircle2 className="h-5 w-5" /> Managers gain:
               </p>
@@ -575,11 +580,11 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="space-y-3 pt-4">
-              <p className="text-2xl font-bold leading-relaxed">
+            <div className="space-y-5 pt-4">
+              <p className="text-base leading-relaxed">
                 Zephyr doesn&apos;t change how teams build.
               </p>
-              <p className="text-2xl font-bold leading-relaxed">
+              <p className="text-base leading-relaxed">
                 It removes structural friction from how they ship.
               </p>
             </div>
