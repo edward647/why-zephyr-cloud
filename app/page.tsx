@@ -361,7 +361,13 @@ export default function Home() {
               deployed version already live at the edge.
             </p>
 
-            <RollbackMockup />
+            <div className="rounded-xl border border-border bg-gradient-to-br from-primary/5 via-card to-card p-8">
+              <img
+                src="/Release-mangement-risk.svg"
+                alt="Release management and risk visualization"
+                className="w-full h-auto"
+              />
+            </div>
           </div>
 
           {/* How Teams Use Zephyr */}
