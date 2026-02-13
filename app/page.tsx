@@ -178,64 +178,67 @@ export default function Home() {
         </div>
 
         {/* Edge Deployment Feature Box */}
-        <div className="mb-32 rounded-md border border-gray-700 p-12 lg:p-20">
-          <h2 className="mb-2 text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
+        <div className="relative mb-32 overflow-hidden rounded-md border border-white/20 p-8 lg:p-12">
+          <h2 className="mb-4 text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
             Why Edge Deployment Matters
             <span className="block text-2xl font-normal leading-relaxed text-foreground lg:text-3xl">
               (Latency, Performance, User Experience)
             </span>
           </h2>
 
-          <div className="mt-16 grid gap-16 lg:grid-cols-2">
-            <div className="space-y-7">
-              <p className="text-lg leading-relaxed text-muted-foreground">
+          <div className="mt-8 grid gap-16 lg:grid-cols-2">
+            <div className="space-y-4">
+              <p className="text-base leading-relaxed text-muted-foreground">
                 Modern user experiences are increasingly sensitive to latency.
               </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
+              <p className="text-base leading-relaxed text-muted-foreground">
                 Every additional network hop adds delay, increases failure
                 surface area, and degrades perceived performance.
               </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
+              <p className="text-base leading-relaxed text-muted-foreground">
                 Zephyr Cloud deploys applications{" "}
-                <span className="font-semibold text-foreground">
+                <span className="text-foreground">
                   directly to the edge
                 </span>
                 , ensuring content and application logic are served as close to
                 users as possible.
               </p>
-              <p className="text-lg leading-relaxed text-muted-foreground">
+              <p className="text-base leading-relaxed text-muted-foreground">
                 By deploying at the edge, Zephyr removes the performance penalty
                 typically introduced by centralized deployment models—without
                 requiring teams to redesign their applications.
               </p>
 
               <div className="space-y-5 pt-4">
-                <p className="flex items-center gap-2 text-base font-medium text-primary">
-                  <TrendingDown className="h-5 w-5" /> Typical symptoms:
+                <p className="flex items-center gap-2 text-base font-medium text-foreground">
+                  <TrendingDown className="h-5 w-5 text-primary" /> Typical symptoms:
                 </p>
-                <ul className="space-y-2 text-base text-muted-foreground">
-                  <li className="flex gap-3 leading-relaxed">
-                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-                    Ultra-low latency by reducing round trips to centralized
-                    servers
+                <ul className="space-y-1 text-base text-muted-foreground">
+                  <li className="flex items-center gap-3 leading-relaxed">
+                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                    <span><span className="text-foreground">Ultra-low latency</span> by reducing round trips to centralized
+                    servers</span>
                   </li>
-                  <li className="flex gap-3 leading-relaxed">
-                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-                    Faster initial load times and interactions
+                  <li className="flex items-center gap-3 leading-relaxed">
+                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                    <span>Faster initial load times and interactions</span>
                   </li>
-                  <li className="flex gap-3 leading-relaxed">
-                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-                    More consistent performance across geographies
+                  <li className="flex items-center gap-3 leading-relaxed">
+                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                    <span>More consistent performance across geographies</span>
                   </li>
-                  <li className="flex gap-3 leading-relaxed">
-                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-                    Improved reliability by distributing execution closer to
-                    users
+                  <li className="flex items-center gap-3 leading-relaxed">
+                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                    <span>Improved reliability by distributing execution closer to
+                    users</span>
                   </li>
                 </ul>
               </div>
 
-              <p className="pt-4 text-base leading-relaxed">
+            </div>
+
+            <div className="space-y-4">
+              <p className="text-base leading-relaxed">
                 Edge deployment is not an optimization layer. It is the default
                 execution model.
               </p>
@@ -246,8 +249,15 @@ export default function Home() {
                 Learn more <ArrowRight className="h-4 w-4" />
               </a>
             </div>
+          </div>
 
-            <EdgeGlobe />
+          {/* Globe positioned at bottom right */}
+          <div className="absolute bottom-0 right-0 w-[45%] bg-gradient-to-br from-primary/5 via-card to-card pb-0 pl-8 pr-8 pt-8">
+            <img
+              src="/Globe.svg"
+              alt="Global edge deployment network"
+              className="w-full h-auto"
+            />
           </div>
         </div>
 
@@ -421,27 +431,31 @@ export default function Home() {
               No new approval chains. No additional release meetings.
             </p>
 
-            <div className="rounded-xl border border-border bg-gradient-to-br from-primary/5 via-card to-card p-8">
-              <img
-                src="/How-teams-use-zephyr.svg"
-                alt="Dashboard UI showing how teams use Zephyr"
-                className="w-full h-auto"
-              />
-            </div>
+            <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
+              <div className="rounded-xl border border-border bg-gradient-to-br from-primary/5 via-card to-card p-8">
+                <img
+                  src="/How-teams-use-zephyr.svg"
+                  alt="Dashboard UI showing how teams use Zephyr"
+                  className="w-full h-auto"
+                />
+              </div>
 
-            <p className="text-sm text-muted-foreground">
-              Zephyr provides both{" "}
-              <span className="font-semibold text-foreground">
-                CLI and UI workflows
-              </span>{" "}
-              so teams can work how they want.
-            </p>
-            <a
-              href="#"
-              className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
-            >
-              Learn more <ArrowRight className="h-4 w-4" />
-            </a>
+              <div className="space-y-4">
+                <p className="text-sm text-muted-foreground">
+                  Zephyr provides both{" "}
+                  <span className="font-semibold text-foreground">
+                    CLI and UI workflows
+                  </span>{" "}
+                  so teams can work how they want.
+                </p>
+                <a
+                  href="#"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+                >
+                  Learn more <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
