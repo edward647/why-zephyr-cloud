@@ -9,12 +9,12 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-center gap-12 p-6 lg:px-8">
         {/* Logo */}
-        <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 flex items-center gap-2 p-1.5">
+        <div className="flex">
+          <a href="/" className="-m-1.5 flex items-center gap-3 p-1.5">
             <ZephyrLogo className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold">Zephyr Cloud</span>
+            <span className="text-2xl font-bold tracking-tight">Zephyr Cloud</span>
           </a>
         </div>
 
@@ -34,8 +34,8 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Desktop navigation */}
-        <div className="hidden lg:flex lg:gap-x-12">
+        {/* Desktop navigation - centered */}
+        <div className="hidden lg:flex lg:gap-x-8">
           <a href="#features" className="text-sm font-semibold leading-6 text-muted-foreground hover:text-foreground">
             Features
           </a>
@@ -50,8 +50,8 @@ export default function Header() {
           </a>
         </div>
 
-        {/* Desktop CTA buttons */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
+        {/* Desktop CTA buttons - centered */}
+        <div className="hidden lg:flex lg:gap-x-4">
           <a
             href="#"
             className="text-sm font-semibold leading-6 text-muted-foreground hover:text-foreground"
@@ -60,7 +60,7 @@ export default function Header() {
           </a>
           <a
             href="#"
-            className="rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             Get started
           </a>

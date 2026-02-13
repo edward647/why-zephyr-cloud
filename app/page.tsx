@@ -4,6 +4,7 @@ import {
   Users,
   ArrowRight,
   Globe,
+  TrendingDown,
 } from "lucide-react";
 import ZephyrLogo from "@/components/logos/ZephyrLogo";
 import WebpackLogo from "@/components/logos/WebpackLogo";
@@ -59,7 +60,7 @@ export default function Home() {
 
             <div className="space-y-5 pt-2">
               <p className="flex items-center gap-2 text-base font-medium text-primary">
-                <CheckCircle2 className="h-5 w-5" /> Typical symptoms:
+                <TrendingDown className="h-5 w-5" /> Typical symptoms:
               </p>
               <ul className="space-y-4 text-base text-muted-foreground">
                 <li className="flex gap-3 leading-relaxed">
@@ -214,7 +215,7 @@ export default function Home() {
 
               <div className="space-y-5 pt-4">
                 <p className="flex items-center gap-2 text-base font-medium text-primary">
-                  <CheckCircle2 className="h-5 w-5" /> Typical symptoms:
+                  <TrendingDown className="h-5 w-5" /> Typical symptoms:
                 </p>
                 <ul className="space-y-4 text-base text-muted-foreground">
                   <li className="flex gap-3 leading-relaxed">
@@ -334,7 +335,7 @@ export default function Home() {
 
             <div className="space-y-5 pt-2">
               <p className="flex items-center gap-2 text-base font-medium text-primary">
-                <CheckCircle2 className="h-5 w-5" /> Typical symptoms:
+                <TrendingDown className="h-5 w-5" /> Typical symptoms:
               </p>
               <ul className="space-y-4 text-base text-muted-foreground">
                 <li className="flex gap-3 leading-relaxed">
@@ -446,7 +447,7 @@ export default function Home() {
 
             <div className="space-y-5 pt-2">
               <p className="flex items-center gap-2 text-base font-medium text-primary">
-                <CheckCircle2 className="h-5 w-5" /> Typical symptoms:
+                <TrendingDown className="h-5 w-5" /> Typical symptoms:
               </p>
               <ul className="space-y-4 text-base text-muted-foreground">
                 <li className="flex gap-3 leading-relaxed">
