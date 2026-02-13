@@ -19,15 +19,13 @@ import VelocityChart from "@/components/VelocityChart";
 import EdgeGlobe from "@/components/EdgeGlobe";
 import DashboardMockup from "@/components/DashboardMockup";
 import RollbackMockup from "@/components/RollbackMockup";
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
+      <Header />
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-12 lg:py-24">
-        {/* Logo */}
-        <div className="mb-12">
-          <ZephyrLogo className="h-12 w-12 text-primary" />
-        </div>
 
         {/* Header */}
         <div className="mb-24">
