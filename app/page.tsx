@@ -20,17 +20,15 @@ import VelocityChart from "@/components/VelocityChart";
 import EdgeGlobe from "@/components/EdgeGlobe";
 import DashboardMockup from "@/components/DashboardMockup";
 import RollbackMockup from "@/components/RollbackMockup";
-import Header from "@/components/Header";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground antialiased">
-      <Header />
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-12 lg:py-24">
 
         {/* Header */}
         <div className="mb-24">
-          <h1 className="mb-8 text-6xl font-bold leading-tight tracking-tight lg:text-8xl">
+          <h1 className="mb-8 text-6xl font-medium leading-tight tracking-tight lg:text-8xl">
             Why choose Zephyr Cloud?
           </h1>
           <p className="text-2xl leading-relaxed lg:text-3xl">
@@ -46,7 +44,7 @@ export default function Home() {
         <div className="mb-32 grid gap-20 lg:grid-cols-2">
           {/* Left: The Problem */}
           <div className="space-y-7">
-            <h2 className="text-4xl font-bold leading-tight tracking-tight lg:text-5xl">
+            <h2 className="text-4xl font-medium leading-tight tracking-tight lg:text-5xl">
               The Problem Managers Actually Face
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
@@ -62,7 +60,7 @@ export default function Home() {
               <p className="flex items-center gap-2 text-base font-medium text-primary">
                 <TrendingDown className="h-5 w-5" /> Typical symptoms:
               </p>
-              <ul className="space-y-4 text-base text-muted-foreground">
+              <ul className="space-y-2 text-base text-muted-foreground">
                 <li className="flex gap-3 leading-relaxed">
                   <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Deployments blocked by cross-team timing
@@ -102,7 +100,7 @@ export default function Home() {
 
           {/* Right: What Zephyr Changes */}
           <div className="space-y-7">
-            <h2 className="text-4xl font-bold leading-tight tracking-tight lg:text-5xl">
+            <h2 className="text-4xl font-medium leading-tight tracking-tight lg:text-5xl">
               What Zephyr Cloud Changes
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
@@ -118,7 +116,7 @@ export default function Home() {
               <p className="flex items-center gap-2 text-base font-medium text-primary">
                 <CheckCircle2 className="h-5 w-5" /> With Zephyr:
               </p>
-              <ul className="space-y-4 text-base text-muted-foreground">
+              <ul className="space-y-2 text-base text-muted-foreground">
                 <li className="flex gap-3 leading-relaxed">
                   <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Teams deploy independently
@@ -183,7 +181,7 @@ export default function Home() {
 
         {/* Edge Deployment Feature Box */}
         <div className="mb-32 rounded-2xl border border-border bg-card p-12 lg:p-20">
-          <h2 className="mb-2 text-4xl font-bold leading-tight tracking-tight lg:text-5xl">
+          <h2 className="mb-2 text-4xl font-medium leading-tight tracking-tight lg:text-5xl">
             Why Edge Deployment Matters
             <span className="mt-2 block text-2xl font-normal leading-relaxed text-muted-foreground lg:text-3xl">
               (Latency, Performance, User Experience)
@@ -217,7 +215,7 @@ export default function Home() {
                 <p className="flex items-center gap-2 text-base font-medium text-primary">
                   <TrendingDown className="h-5 w-5" /> Typical symptoms:
                 </p>
-                <ul className="space-y-4 text-base text-muted-foreground">
+                <ul className="space-y-2 text-base text-muted-foreground">
                   <li className="flex gap-3 leading-relaxed">
                     <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                     Ultra-low latency by reducing round trips to centralized
@@ -287,7 +285,7 @@ export default function Home() {
 
         {/* Why Not Build In-House */}
         <div className="mb-32 space-y-7">
-          <h2 className="text-4xl font-bold leading-tight tracking-tight lg:text-5xl">
+          <h2 className="text-4xl font-medium leading-tight tracking-tight lg:text-5xl">
             Why Not Build This In-House?
           </h2>
           <p className="text-lg leading-relaxed text-muted-foreground">
@@ -325,7 +323,7 @@ export default function Home() {
         <div className="mb-32 grid gap-20 lg:grid-cols-2">
           {/* Release Management */}
           <div className="space-y-7">
-            <h2 className="text-4xl font-bold leading-tight tracking-tight lg:text-5xl">
+            <h2 className="text-4xl font-medium leading-tight tracking-tight lg:text-5xl">
               Release Management & Risk
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
@@ -337,7 +335,7 @@ export default function Home() {
               <p className="flex items-center gap-2 text-base font-medium text-primary">
                 <TrendingDown className="h-5 w-5" /> Typical symptoms:
               </p>
-              <ul className="space-y-4 text-base text-muted-foreground">
+              <ul className="space-y-2 text-base text-muted-foreground">
                 <li className="flex gap-3 leading-relaxed">
                   <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Every deployment automatically creates a version
@@ -370,7 +368,7 @@ export default function Home() {
 
           {/* How Teams Use Zephyr */}
           <div className="space-y-7">
-            <h2 className="text-4xl font-bold leading-tight tracking-tight lg:text-5xl">
+            <h2 className="text-4xl font-medium leading-tight tracking-tight lg:text-5xl">
               How Teams Use Zephyr
             </h2>
 
@@ -380,7 +378,7 @@ export default function Home() {
                   <Terminal className="h-6 w-6 text-primary" /> Engineering
                   teams
                 </h3>
-                <ul className="space-y-4 text-base text-muted-foreground">
+                <ul className="space-y-2 text-base text-muted-foreground">
                   <li className="flex gap-3 leading-relaxed">
                     <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                     CLI-first workflows
@@ -401,7 +399,7 @@ export default function Home() {
                   <Users className="h-6 w-6 text-primary" /> Managers & IT
                   leaders
                 </h3>
-                <ul className="space-y-4 text-base text-muted-foreground">
+                <ul className="space-y-2 text-base text-muted-foreground">
                   <li className="flex gap-3 leading-relaxed">
                     <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                     Central UI dashboard for visibility into deployments,
@@ -440,7 +438,7 @@ export default function Home() {
         {/* Enterprise Ready */}
         <div className="mb-32 grid gap-20 lg:grid-cols-2">
           <div className="space-y-7">
-            <h2 className="text-4xl font-bold leading-tight tracking-tight lg:text-5xl">
+            <h2 className="text-4xl font-medium leading-tight tracking-tight lg:text-5xl">
               Enterprise-Ready
               <span className="block">by Design</span>
             </h2>
@@ -449,7 +447,7 @@ export default function Home() {
               <p className="flex items-center gap-2 text-base font-medium text-primary">
                 <TrendingDown className="h-5 w-5" /> Typical symptoms:
               </p>
-              <ul className="space-y-4 text-base text-muted-foreground">
+              <ul className="space-y-2 text-base text-muted-foreground">
                 <li className="flex gap-3 leading-relaxed">
                   <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Regional hosting strategies (EU, US, APAC) supported via
@@ -544,7 +542,7 @@ export default function Home() {
           <div className="absolute right-16 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-primary/20 blur-3xl" />
 
           <div className="relative space-y-10">
-            <h2 className="text-4xl font-bold leading-tight tracking-tight lg:text-5xl">
+            <h2 className="text-4xl font-medium leading-tight tracking-tight lg:text-5xl">
               The Manager
               <span className="block">Outcome</span>
             </h2>
