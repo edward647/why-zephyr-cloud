@@ -16,10 +16,6 @@ import FastlyLogo from "@/components/logos/FastlyLogo";
 import AkamaiLogo from "@/components/logos/AkamaiLogo";
 import AWSLogo from "@/components/logos/AWSLogo";
 import VercelLogo from "@/components/logos/VercelLogo";
-import VelocityChart from "@/components/VelocityChart";
-import EdgeGlobe from "@/components/EdgeGlobe";
-import DashboardMockup from "@/components/DashboardMockup";
-import RollbackMockup from "@/components/RollbackMockup";
 
 export default function Home() {
   return (
@@ -45,7 +41,7 @@ export default function Home() {
             <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
               The Problem Managers Actually Face
             </h2>
-            <p className="text-lg leading-relaxed text-muted-foreground">
+            <p className="text-base leading-relaxed text-muted-foreground">
               Engineering teams don't struggle with building software. They
               struggle with{" "}
               <span className="font-semibold text-foreground">
@@ -55,24 +51,24 @@ export default function Home() {
             </p>
 
             <div className="space-y-5 pt-2">
-              <p className="flex items-center gap-2 text-base font-medium text-primary">
-                <TrendingDown className="h-5 w-5" /> Typical symptoms:
+              <p className="flex items-center gap-2 text-base font-medium text-foreground">
+                <TrendingDown className="h-5 w-5 text-primary" /> Typical symptoms:
               </p>
-              <ul className="space-y-2 text-base text-muted-foreground">
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+              <ul className="space-y-1 text-base text-muted-foreground">
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Deployments blocked by cross-team timing
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Risky or slow rollbacks
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Growing CI/CD and tooling complexity
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Increasing time spent managing releases instead of shipping
                   value
                 </li>
@@ -83,7 +79,11 @@ export default function Home() {
               Velocity isn&apos;t the issue. Dependency is.
             </p>
 
-            <VelocityChart />
+            <img
+              src="/Heatmap.svg"
+              alt="Deployment velocity and dependency visualization"
+              className="w-full h-auto"
+            />
 
             <p className="pt-2 text-base leading-relaxed">
               Zephyr Cloud enhances and accelerates the SDLC
@@ -101,7 +101,7 @@ export default function Home() {
             <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
               What Zephyr Cloud Changes
             </h2>
-            <p className="text-lg leading-relaxed text-muted-foreground">
+            <p className="text-base leading-relaxed text-muted-foreground">
               Zephyr Cloud is a{" "}
               <span className="font-semibold text-foreground">
                 managed deployment and release control platform
@@ -114,31 +114,31 @@ export default function Home() {
               <p className="flex items-center gap-2 text-base font-medium text-primary">
                 <CheckCircle2 className="h-5 w-5" /> With Zephyr:
               </p>
-              <ul className="space-y-2 text-base text-muted-foreground">
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+              <ul className="space-y-1 text-base text-muted-foreground">
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Teams deploy independently
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Releases are incremental, not all-or-nothing
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Rollback and roll-forward are instant
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Deployment logic is centralized and observable
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Scaling teams reduces friction instead of increasing it
                 </li>
               </ul>
             </div>
 
-            <p className="pt-2 text-lg leading-relaxed text-muted-foreground">
+            <p className="pt-2 text-base leading-relaxed text-muted-foreground">
               Zephyr acts as the{" "}
               <span className="font-semibold text-foreground">
                 deployment platform
@@ -146,30 +146,18 @@ export default function Home() {
               , not just middleware between the client and a CDN.
             </p>
 
-            <div className="flex items-center gap-6">
-              <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-white p-2">
-                <ViteLogo className="h-10 w-10" />
-              </div>
-              <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-white p-2">
-                <RspackLogo className="h-10 w-10" />
-              </div>
-              <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-white p-2">
-                <WebpackLogo className="h-10 w-10" />
-              </div>
-              <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-white p-2">
-                <HonoLogo className="h-10 w-10" />
-              </div>
-              <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-primary/60 p-2">
-                <Globe className="h-7 w-7 text-primary-foreground" />
-              </div>
-            </div>
+            <img
+              src="/What-zephyr-cloud-changes.svg"
+              alt="What Zephyr Cloud changes diagram"
+              className="w-full h-auto"
+            />
 
             <p className="pt-2 text-base leading-relaxed text-muted-foreground">
               Zephyr integrates with popular bundlers Webpack, Rspack, Vite to
               provide global distribution of web applications.
             </p>
             <a
-              href="#"
+              href="https://docs.zephyr-cloud.io/reference/why-zephyr-cloud"
               className="inline-flex items-center gap-1 text-base font-medium text-primary hover:underline"
             >
               Learn more <ArrowRight className="h-4 w-4" />
@@ -216,21 +204,21 @@ export default function Home() {
                 <ul className="space-y-1 text-base text-muted-foreground">
                   <li className="flex items-center gap-3 leading-relaxed">
                     <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-                    <span><span className="text-foreground">Ultra-low latency</span> by reducing round trips to centralized
-                    servers</span>
+                    <span className="text-foreground">Ultra-low latency</span> by reducing round trips to centralized
+                    servers
                   </li>
                   <li className="flex items-center gap-3 leading-relaxed">
                     <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-                    <span>Faster initial load times and interactions</span>
+                    Faster initial load times and interactions
                   </li>
                   <li className="flex items-center gap-3 leading-relaxed">
                     <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-                    <span>More consistent performance across geographies</span>
+                    More consistent performance across geographies
                   </li>
                   <li className="flex items-center gap-3 leading-relaxed">
                     <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-                    <span>Improved reliability by distributing execution closer to
-                    users</span>
+                    Improved reliability by distributing execution closer to
+                    users
                   </li>
                 </ul>
               </div>
@@ -252,7 +240,7 @@ export default function Home() {
           </div>
 
           {/* Globe positioned at bottom right */}
-          <div className="absolute bottom-0 right-0 w-[45%] bg-gradient-to-br from-primary/5 via-card to-card pb-0 pl-8 pr-8 pt-8">
+          <div className="absolute bottom-0 right-0 w-[45%] pb-0 pl-8 pr-8 pt-8">
             <img
               src="/Globe.svg"
               alt="Global edge deployment network"
@@ -296,7 +284,7 @@ export default function Home() {
           <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
             Why Not Build This In-House?
           </h2>
-          <p className="text-lg leading-relaxed text-muted-foreground">
+          <p className="text-base leading-relaxed text-muted-foreground">
             Internal deployment systems become a permanent platform tax.
           </p>
 
@@ -304,21 +292,21 @@ export default function Home() {
             <p className="flex items-center gap-2 text-base font-medium text-primary">
               <CheckCircle2 className="h-5 w-5" /> Those systems can:
             </p>
-            <ul className="space-y-7 text-base text-muted-foreground">
-              <li className="flex gap-3 leading-relaxed">
-                <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+            <ul className="space-y-3 text-base text-muted-foreground">
+              <li className="flex items-center gap-3 leading-relaxed">
+                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                 Accumulate edge cases over time
               </li>
-              <li className="flex gap-3 leading-relaxed">
-                <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+              <li className="flex items-center gap-3 leading-relaxed">
+                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                 Require ongoing ownership and maintenance
               </li>
-              <li className="flex gap-3 leading-relaxed">
-                <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+              <li className="flex items-center gap-3 leading-relaxed">
+                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                 Compete with core product priorities
               </li>
-              <li className="flex gap-3 leading-relaxed">
-                <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+              <li className="flex items-center gap-3 leading-relaxed">
+                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                 Rarely reach the maturity needed for safe, fast recovery
               </li>
             </ul>
@@ -334,33 +322,33 @@ export default function Home() {
             <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
               Release Management & Risk
             </h2>
-            <p className="text-lg leading-relaxed text-muted-foreground">
+            <p className="text-base leading-relaxed text-muted-foreground">
               Zephyr does not replace release governance — it significantly
               reduces operational load.
             </p>
 
             <div className="space-y-5 pt-2">
-              <p className="flex items-center gap-2 text-base font-medium text-primary">
-                <TrendingDown className="h-5 w-5" /> Typical symptoms:
+              <p className="flex items-center gap-2 text-base font-medium text-foreground">
+                <TrendingDown className="h-5 w-5 text-primary" /> Typical symptoms:
               </p>
-              <ul className="space-y-2 text-base text-muted-foreground">
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+              <ul className="space-y-1 text-base text-muted-foreground">
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Every deployment automatically creates a version
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Deployments can be{" "}
                   <span className="font-semibold text-foreground">
                     tagged and promoted across environments
                   </span>
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Rollback and roll-forward are traffic switches, not rebuilds
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Failed releases are isolated instead of cascading
                 </li>
               </ul>
@@ -392,17 +380,17 @@ export default function Home() {
                   <Terminal className="h-6 w-6 text-primary" /> Engineering
                   teams
                 </h3>
-                <ul className="space-y-2 text-base text-muted-foreground">
-                  <li className="flex gap-3 leading-relaxed">
-                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <ul className="space-y-1 text-base text-muted-foreground">
+                  <li className="flex items-center gap-3 leading-relaxed">
+                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                     CLI-first workflows
                   </li>
-                  <li className="flex gap-3 leading-relaxed">
-                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  <li className="flex items-center gap-3 leading-relaxed">
+                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                     Integrates with existing CI/CD pipelines
                   </li>
-                  <li className="flex gap-3 leading-relaxed">
-                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  <li className="flex items-center gap-3 leading-relaxed">
+                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                     No framework or bundler lock-in (supports Hono and more)
                   </li>
                 </ul>
@@ -413,14 +401,14 @@ export default function Home() {
                   <Users className="h-6 w-6 text-primary" /> Managers & IT
                   leaders
                 </h3>
-                <ul className="space-y-2 text-base text-muted-foreground">
-                  <li className="flex gap-3 leading-relaxed">
-                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <ul className="space-y-1 text-base text-muted-foreground">
+                  <li className="flex items-center gap-3 leading-relaxed">
+                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                     Central UI dashboard for visibility into deployments,
                     versions, environments, and rollback readiness
                   </li>
-                  <li className="flex gap-3 leading-relaxed">
-                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  <li className="flex items-center gap-3 leading-relaxed">
+                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                     Clear auditability without direct pipeline access
                   </li>
                 </ul>
@@ -468,34 +456,34 @@ export default function Home() {
             </h2>
 
             <div className="space-y-5 pt-2">
-              <p className="flex items-center gap-2 text-base font-medium text-primary">
-                <TrendingDown className="h-5 w-5" /> Typical symptoms:
+              <p className="flex items-center gap-2 text-base font-medium text-foreground">
+                <TrendingDown className="h-5 w-5 text-primary" /> Typical symptoms:
               </p>
-              <ul className="space-y-2 text-base text-muted-foreground">
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+              <ul className="space-y-1 text-base text-muted-foreground">
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Regional hosting strategies (EU, US, APAC) supported via
                   bring-your-own cloud and CDN configuration
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Akamai CDN fully supported and configurable
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Cloud-agnostic architecture
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Poly-cloud deployment supported, enabling simultaneous
                   deployment across providers
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Roadmap for on-prem and hybrid environments
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Flat, organization-level pricing above ~20 users
                 </li>
               </ul>
@@ -576,25 +564,25 @@ export default function Home() {
               <p className="flex items-center gap-2 text-base font-medium text-primary">
                 <CheckCircle2 className="h-5 w-5" /> Managers gain:
               </p>
-              <ul className="space-y-5 text-xl text-muted-foreground">
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+              <ul className="space-y-2 text-xl text-muted-foreground">
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Faster, more predictable releases
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Lower rollback and outage risk
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Less coordination overhead
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Teams that scale without slowing delivery
                 </li>
-                <li className="flex gap-3 leading-relaxed">
-                  <span className="mt-2.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Reduced long-term operational cost vs. custom tooling
                 </li>
               </ul>
