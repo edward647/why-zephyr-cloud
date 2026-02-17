@@ -38,7 +38,7 @@ export default function Home() {
         {/* Two Column Section: Problem & Solution */}
         <div className="mb-32 grid gap-20 lg:grid-cols-2">
           {/* Left: The Problem */}
-          <div className="space-y-7">
+          <div className="space-y-4">
             <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
               The Problem Managers Actually Face
             </h2>
@@ -51,7 +51,7 @@ export default function Home() {
               as systems and teams scale.
             </p>
 
-            <div className="space-y-5 pt-2">
+            <div className="space-y-2 pt-0">
               <p className="flex items-center gap-2 text-base font-medium text-foreground">
                 <TrendingDown className="h-5 w-5 text-primary" /> Typical symptoms:
               </p>
@@ -98,7 +98,7 @@ export default function Home() {
           </div>
 
           {/* Right: What Zephyr Changes */}
-          <div className="space-y-7">
+          <div className="space-y-4">
             <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
               What Zephyr Cloud Changes
             </h2>
@@ -111,7 +111,7 @@ export default function Home() {
               changing how teams build.
             </p>
 
-            <div className="space-y-5 pt-2">
+            <div className="space-y-2 pt-0">
               <p className="flex items-center gap-2 text-base font-medium text-foreground">
                 <CircleCheckBig className="h-5 w-5 text-primary" /> With Zephyr:
               </p>
@@ -198,7 +198,7 @@ export default function Home() {
                 requiring teams to redesign their applications.
               </p>
 
-              <div className="space-y-5 pt-4">
+              <div className="space-y-2 pt-0">
                 <p className="flex items-center gap-2 text-base font-medium text-foreground">
                   <TrendingDown className="h-5 w-5 text-primary" /> Typical symptoms:
                 </p>
@@ -251,10 +251,10 @@ export default function Home() {
         </div>
 
         {/* Command Block & Why Not Build In-House - Two Column Layout */}
-        <div className="mb-32 grid gap-20 lg:grid-cols-2">
+        <div className="mb-32 grid gap-20 lg:grid-cols-2 lg:items-start">
           {/* Left Column - Command and Description */}
-          <div className="space-y-7">
-            <div className="rounded-lg border border-white/10 bg-[#171717] p-8 space-y-4">
+          <div className="space-y-4">
+            <div className="rounded-lg border border-white/10 bg-[#171717] p-4 space-y-4">
               <code className="flex items-center gap-2 font-mono text-base">
                 <Terminal className="h-5 w-5 text-primary" />
                 <span className="text-muted-foreground">$</span> npx
@@ -268,11 +268,11 @@ export default function Home() {
             </div>
 
             <p className="text-base leading-relaxed">
-              Zephyr provides{" "}
+              <span className="text-muted-foreground">Zephyr provides</span>{" "}
               <span className="font-semibold text-foreground">
                 production-ready deployment orchestration out of the box
               </span>{" "}
-              without adding internal platform overhead.
+              <span className="text-muted-foreground">without adding internal platform overhead.</span>
             </p>
 
             <a
@@ -284,7 +284,7 @@ export default function Home() {
           </div>
 
           {/* Right Column - Why Not Build In-House */}
-          <div className="space-y-7">
+          <div className="space-y-4">
             <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
               Why Not Build This In-House?
             </h2>
@@ -292,7 +292,7 @@ export default function Home() {
               Internal deployment systems become a permanent platform tax.
             </p>
 
-            <div className="space-y-5 pt-2">
+            <div className="space-y-2 pt-0">
               <p className="flex items-center gap-2 text-base font-medium text-foreground">
                 <CircleCheckBig className="h-5 w-5 text-primary" /> Those systems can:
               </p>
@@ -323,7 +323,7 @@ export default function Home() {
         {/* Release Management & How Teams Use */}
         <div className="mb-32 grid gap-20 lg:grid-cols-2">
           {/* Release Management */}
-          <div className="space-y-7">
+          <div className="space-y-4">
             <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
               Release Management & Risk
             </h2>
@@ -332,7 +332,7 @@ export default function Home() {
               reduces operational load.
             </p>
 
-            <div className="space-y-5 pt-2">
+            <div className="space-y-2 pt-0">
               <p className="flex items-center gap-2 text-base font-medium text-foreground">
                 <TrendingDown className="h-5 w-5 text-primary" /> Typical symptoms:
               </p>
@@ -364,25 +364,36 @@ export default function Home() {
               deployed version already live at the edge.
             </p>
 
-            <div className="rounded-xl border border-border bg-gradient-to-br from-primary/5 via-card to-card p-8">
+            <div className="flex items-center gap-8">
               <img
                 src="/Release-mangement-risk.svg"
                 alt="Release management and risk visualization"
-                className="w-full h-auto"
+                className="w-[55%] h-auto"
               />
+              <div className="flex flex-col gap-4">
+                <p className="text-base leading-relaxed">
+                  Rollback in seconds, no rebuild needed.
+                </p>
+                <a
+                  href="#"
+                  className="inline-flex items-center gap-1 text-base font-medium text-primary hover:underline"
+                >
+                  Learn more <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
             </div>
           </div>
 
           {/* How Teams Use Zephyr */}
-          <div className="space-y-7">
+          <div className="space-y-4">
             <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
               How Teams Use Zephyr
             </h2>
 
-            <div className="space-y-7">
+            <div className="space-y-4">
               <div>
-                <h3 className="mb-4 flex items-center gap-2 text-2xl font-semibold leading-tight">
-                  <Terminal className="h-6 w-6 text-primary" /> Engineering
+                <h3 className="mb-4 flex items-center gap-2 text-base font-medium leading-tight">
+                  <Terminal className="h-5 w-5 text-primary" /> Engineering
                   teams
                 </h3>
                 <ul className="space-y-1 text-base text-muted-foreground">
@@ -402,13 +413,13 @@ export default function Home() {
               </div>
 
               <div>
-                <h3 className="mb-4 flex items-center gap-2 text-2xl font-semibold leading-tight">
-                  <Users className="h-6 w-6 text-primary" /> Managers & IT
+                <h3 className="mb-4 flex items-center gap-2 text-base font-medium leading-tight">
+                  <Users className="h-5 w-5 text-primary" /> Managers & IT
                   leaders
                 </h3>
                 <ul className="space-y-1 text-base text-muted-foreground">
-                  <li className="flex items-center gap-3 leading-relaxed">
-                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  <li className="flex gap-3 leading-relaxed">
+                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                     Central UI dashboard for visibility into deployments,
                     versions, environments, and rollback readiness
                   </li>
@@ -454,13 +465,13 @@ export default function Home() {
 
         {/* Enterprise Ready */}
         <div className="mb-32 grid gap-20 lg:grid-cols-2">
-          <div className="space-y-7">
+          <div className="space-y-4">
             <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
               Enterprise-Ready
               <span className="block">by Design</span>
             </h2>
 
-            <div className="space-y-5 pt-2">
+            <div className="space-y-2 pt-0">
               <p className="flex items-center gap-2 text-base font-medium text-foreground">
                 <TrendingDown className="h-5 w-5 text-primary" /> Typical symptoms:
               </p>
@@ -565,7 +576,7 @@ export default function Home() {
               <span className="block">Outcome</span>
             </h2>
 
-            <div className="space-y-5">
+            <div className="space-y-2">
               <p className="flex items-center gap-2 text-base font-medium text-foreground">
                 <CircleCheckBig className="h-5 w-5 text-primary" /> Managers gain:
               </p>
