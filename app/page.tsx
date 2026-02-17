@@ -6,6 +6,7 @@ import {
   Globe,
   TrendingDown,
   Copy,
+  Clock5,
 } from "lucide-react";
 import ZephyrLogo from "@/components/logos/ZephyrLogo";
 import WebpackLogo from "@/components/logos/WebpackLogo";
@@ -513,7 +514,7 @@ export default function Home() {
           </div>
 
           <div className="space-y-5">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-3 gap-4">
               {[
                 { name: "Cloudflare", status: "Available", logo: "/Cloudflare.svg" },
                 { name: "Fastly", status: "Available", logo: "/Fastly.svg" },
@@ -524,24 +525,22 @@ export default function Home() {
               ].map((provider) => (
                 <div
                   key={provider.name}
-                  className="flex items-center justify-center rounded-lg border border-border bg-card p-6"
+                  className="flex max-w-[419px] items-center justify-center rounded-lg border border-white/10 bg-card p-6"
                 >
-                  <div className="flex min-h-[140px] w-full flex-col items-center justify-between gap-4 rounded-md border border-white/10 p-6">
-                    <div className="flex h-8 items-center justify-center">
-                      <img
-                        src={provider.logo}
-                        alt={provider.name}
-                        className={provider.name === "Vercel" ? "h-5 w-auto" : "h-8 w-auto"}
-                      />
-                    </div>
+                  <div className="flex min-h-[140px] w-[180px] flex-col items-center justify-center gap-4 rounded-md p-6">
+                    <img
+                      src={provider.logo}
+                      alt={provider.name}
+                      className={provider.name === "Vercel" ? "h-5 w-auto" : "h-8 w-auto"}
+                    />
                     {provider.status === "Available" ? (
                       <div className="flex items-center gap-1 rounded-full bg-[#022C22] px-3 py-1 text-xs font-medium text-[#34D399]">
                         <CircleCheckBig className="h-3 w-3" />
                         Available
                       </div>
                     ) : (
-                      <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                        <span>⏱</span> {provider.status}
+                      <div className="flex items-center gap-1 whitespace-nowrap rounded-full bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
+                        <Clock5 className="h-3 w-3" /> {provider.status}
                       </div>
                     )}
                   </div>
