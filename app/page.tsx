@@ -12,11 +12,6 @@ import WebpackLogo from "@/components/logos/WebpackLogo";
 import ViteLogo from "@/components/logos/ViteLogo";
 import RspackLogo from "@/components/logos/RspackLogo";
 import HonoLogo from "@/components/logos/HonoLogo";
-import CloudflareLogo from "@/components/logos/CloudflareLogo";
-import FastlyLogo from "@/components/logos/FastlyLogo";
-import AkamaiLogo from "@/components/logos/AkamaiLogo";
-import AWSLogo from "@/components/logos/AWSLogo";
-import VercelLogo from "@/components/logos/VercelLogo";
 
 export default function Home() {
   return (
@@ -269,7 +264,7 @@ export default function Home() {
 
             <p className="text-base leading-relaxed">
               <span className="text-muted-foreground">Zephyr provides</span>{" "}
-              <span className="font-semibold text-foreground">
+              <span className="font-normal text-foreground">
                 production-ready deployment orchestration out of the box
               </span>{" "}
               <span className="text-muted-foreground">without adding internal platform overhead.</span>
@@ -294,7 +289,7 @@ export default function Home() {
 
             <div className="space-y-2 pt-0">
               <p className="flex items-center gap-2 text-base font-medium text-foreground">
-                <CircleCheckBig className="h-5 w-5 text-primary" /> Those systems can:
+                <TrendingDown className="h-5 w-5 text-primary" /> Those systems can:
               </p>
               <ul className="space-y-1 text-base text-muted-foreground">
                 <li className="flex items-center gap-3 leading-relaxed">
@@ -343,10 +338,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-center gap-3 leading-relaxed">
                   <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-                  Deployments can be{" "}
-                  <span className="font-semibold text-foreground">
-                    tagged and promoted across environments
-                  </span>
+                  Deployments can be <span className="font-normal text-foreground">tagged and promoted across environments</span>
                 </li>
                 <li className="flex items-center gap-3 leading-relaxed">
                   <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
@@ -445,16 +437,16 @@ export default function Home() {
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   Zephyr provides both{" "}
-                  <span className="font-semibold text-foreground">
+                  <span className="font-normal text-foreground">
                     CLI and UI workflows
                   </span>{" "}
                   so teams can work how they want.
                 </p>
                 <a
                   href="#"
-                  className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+                  className="inline-flex items-center gap-1 text-base font-medium text-primary hover:underline"
                 >
                   Learn more <ArrowRight className="h-4 w-4" />
                 </a>
@@ -476,8 +468,8 @@ export default function Home() {
                 <TrendingDown className="h-5 w-5 text-primary" /> Typical symptoms:
               </p>
               <ul className="space-y-1 text-base text-muted-foreground">
-                <li className="flex items-center gap-3 leading-relaxed">
-                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex gap-3 leading-relaxed">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Regional hosting strategies (EU, US, APAC) supported via
                   bring-your-own cloud and CDN configuration
                 </li>
@@ -489,8 +481,8 @@ export default function Home() {
                   <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Cloud-agnostic architecture
                 </li>
-                <li className="flex items-center gap-3 leading-relaxed">
-                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                <li className="flex gap-3 leading-relaxed">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Poly-cloud deployment supported, enabling simultaneous
                   deployment across providers
                 </li>
@@ -505,14 +497,14 @@ export default function Home() {
               </ul>
             </div>
 
-            <p className="text-sm leading-relaxed text-muted-foreground">
+            <p className="text-base leading-relaxed text-muted-foreground">
               A user is someone actively deploying or managing via Zephyr—not
               everyone with repository access.
             </p>
 
             <p className="text-base leading-relaxed">
               <span className="text-muted-foreground">Primary cost savings come from</span>{" "}
-              <span className="font-semibold text-foreground">
+              <span className="font-normal text-foreground">
                 reduced engineering overhead,
                 faster feedback cycles, and lower release risk
               </span>{" "}
@@ -523,31 +515,35 @@ export default function Home() {
           <div className="space-y-5">
             <div className="grid grid-cols-2 gap-4">
               {[
-                { name: "Cloudflare", status: "Available", Logo: CloudflareLogo },
-                { name: "Fastly", status: "Available", Logo: FastlyLogo },
-                { name: "fastly", status: "Available", Logo: FastlyLogo },
-                { name: "Akamai", status: "Available", Logo: AkamaiLogo },
-                { name: "AWS", status: "Available", Logo: AWSLogo },
-                { name: "Vercel", status: "Coming soon", Logo: VercelLogo },
+                { name: "Cloudflare", status: "Available", logo: "/Cloudflare.svg" },
+                { name: "Fastly", status: "Available", logo: "/Fastly.svg" },
+                { name: "Netlify", status: "Available", logo: "/Netlify.svg" },
+                { name: "Akamai", status: "Available", logo: "/Akamai.svg" },
+                { name: "AWS", status: "Available", logo: "/AWS.svg" },
+                { name: "Vercel", status: "Coming soon", logo: "/Vercel.svg" },
               ].map((provider) => (
                 <div
                   key={provider.name}
-                  className="relative flex min-h-[120px] flex-col items-center justify-center rounded-lg border border-border bg-card p-6"
+                  className="flex items-center justify-center rounded-lg border border-border bg-card p-6"
                 >
-                  <provider.Logo className="h-8 w-auto" />
-                  <div
-                    className={`absolute bottom-4 flex items-center gap-1 text-xs ${
-                      provider.status === "Available"
-                        ? "text-green-500"
-                        : "text-muted-foreground"
-                    }`}
-                  >
+                  <div className="flex min-h-[140px] w-full flex-col items-center justify-between gap-4 rounded-md border border-white/10 p-6">
+                    <div className="flex h-8 items-center justify-center">
+                      <img
+                        src={provider.logo}
+                        alt={provider.name}
+                        className={provider.name === "Vercel" ? "h-5 w-auto" : "h-8 w-auto"}
+                      />
+                    </div>
                     {provider.status === "Available" ? (
-                      <CircleCheckBig className="h-3 w-3" />
+                      <div className="flex items-center gap-1 rounded-full bg-[#022C22] px-3 py-1 text-xs font-medium text-[#34D399]">
+                        <CircleCheckBig className="h-3 w-3" />
+                        Available
+                      </div>
                     ) : (
-                      <span>⏱</span>
-                    )}{" "}
-                    {provider.status}
+                      <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                        <span>⏱</span> {provider.status}
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}
@@ -558,7 +554,7 @@ export default function Home() {
               your infrastructure, keep control.{" "}
               <a
                 href="#"
-                className="inline-flex items-center gap-1 font-medium text-primary hover:underline"
+                className="inline-flex items-center gap-1 text-base font-medium text-primary hover:underline"
               >
                 Learn more <ArrowRight className="h-4 w-4" />
               </a>
