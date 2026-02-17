@@ -1,10 +1,11 @@
 import {
-  CheckCircle2,
+  CircleCheckBig,
   Terminal,
   Users,
   ArrowRight,
   Globe,
   TrendingDown,
+  Copy,
 } from "lucide-react";
 import ZephyrLogo from "@/components/logos/ZephyrLogo";
 import WebpackLogo from "@/components/logos/WebpackLogo";
@@ -89,7 +90,7 @@ export default function Home() {
               Zephyr Cloud enhances and accelerates the SDLC
             </p>
             <a
-              href="#"
+              href="https://docs.zephyr-cloud.io/?utm_source=chatgpt.com"
               className="inline-flex items-center gap-1 text-base font-medium text-primary hover:underline"
             >
               Learn more <ArrowRight className="h-4 w-4" />
@@ -111,8 +112,8 @@ export default function Home() {
             </p>
 
             <div className="space-y-5 pt-2">
-              <p className="flex items-center gap-2 text-base font-medium text-primary">
-                <CheckCircle2 className="h-5 w-5" /> With Zephyr:
+              <p className="flex items-center gap-2 text-base font-medium text-foreground">
+                <CircleCheckBig className="h-5 w-5 text-primary" /> With Zephyr:
               </p>
               <ul className="space-y-1 text-base text-muted-foreground">
                 <li className="flex items-center gap-3 leading-relaxed">
@@ -249,67 +250,71 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Command Block */}
-        <div className="mb-32 rounded-lg border border-border bg-card p-8">
-          <div className="flex items-center justify-between">
-            <code className="flex items-center gap-2 font-mono text-base">
-              <Terminal className="h-5 w-5 text-primary" />
-              <span className="text-muted-foreground">$</span> npx
-              create-zephyr-apps@latest
-            </code>
-            <button className="rounded-md border border-border bg-secondary px-4 py-2 text-sm text-secondary-foreground hover:bg-secondary/80">
-              press to copy
-            </button>
-          </div>
-        </div>
+        {/* Command Block & Why Not Build In-House - Two Column Layout */}
+        <div className="mb-32 grid gap-20 lg:grid-cols-2">
+          {/* Left Column - Command and Description */}
+          <div className="space-y-7">
+            <div className="rounded-lg border border-white/10 bg-[#171717] p-8 space-y-4">
+              <code className="flex items-center gap-2 font-mono text-base">
+                <Terminal className="h-5 w-5 text-primary" />
+                <span className="text-muted-foreground">$</span> npx
+                create-zephyr-apps@latest
+              </code>
 
-        <p className="mb-6 text-center text-xl leading-relaxed">
-          Zephyr provides{" "}
-          <span className="font-semibold text-foreground">
-            production-ready deployment orchestration out of the box
-          </span>{" "}
-          without adding internal platform overhead.
-        </p>
-        <div className="mb-32 text-center">
-          <a
-            href="#"
-            className="inline-flex items-center gap-1 text-base font-medium text-primary hover:underline"
-          >
-            Learn more <ArrowRight className="h-4 w-4" />
-          </a>
-        </div>
+              <button className="flex items-center gap-2 font-mono text-sm text-muted-foreground hover:text-foreground cursor-pointer">
+                <Copy className="h-4 w-4" />
+                press to copy
+              </button>
+            </div>
 
-        {/* Why Not Build In-House */}
-        <div className="mb-32 space-y-7">
-          <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
-            Why Not Build This In-House?
-          </h2>
-          <p className="text-base leading-relaxed text-muted-foreground">
-            Internal deployment systems become a permanent platform tax.
-          </p>
-
-          <div className="space-y-5 pt-2">
-            <p className="flex items-center gap-2 text-base font-medium text-primary">
-              <CheckCircle2 className="h-5 w-5" /> Those systems can:
+            <p className="text-base leading-relaxed">
+              Zephyr provides{" "}
+              <span className="font-semibold text-foreground">
+                production-ready deployment orchestration out of the box
+              </span>{" "}
+              without adding internal platform overhead.
             </p>
-            <ul className="space-y-3 text-base text-muted-foreground">
-              <li className="flex items-center gap-3 leading-relaxed">
-                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-                Accumulate edge cases over time
-              </li>
-              <li className="flex items-center gap-3 leading-relaxed">
-                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-                Require ongoing ownership and maintenance
-              </li>
-              <li className="flex items-center gap-3 leading-relaxed">
-                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-                Compete with core product priorities
-              </li>
-              <li className="flex items-center gap-3 leading-relaxed">
-                <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-                Rarely reach the maturity needed for safe, fast recovery
-              </li>
-            </ul>
+
+            <a
+              href="#"
+              className="inline-flex items-center gap-1 text-base font-medium text-primary hover:underline"
+            >
+              Learn more <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+
+          {/* Right Column - Why Not Build In-House */}
+          <div className="space-y-7">
+            <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
+              Why Not Build This In-House?
+            </h2>
+            <p className="text-base leading-relaxed text-muted-foreground">
+              Internal deployment systems become a permanent platform tax.
+            </p>
+
+            <div className="space-y-5 pt-2">
+              <p className="flex items-center gap-2 text-base font-medium text-foreground">
+                <CircleCheckBig className="h-5 w-5 text-primary" /> Those systems can:
+              </p>
+              <ul className="space-y-1 text-base text-muted-foreground">
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Accumulate edge cases over time
+                </li>
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Require ongoing ownership and maintenance
+                </li>
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Compete with core product priorities
+                </li>
+                <li className="flex items-center gap-3 leading-relaxed">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+                  Rarely reach the maturity needed for safe, fast recovery
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -527,7 +532,7 @@ export default function Home() {
                     }`}
                   >
                     {provider.status === "Available" ? (
-                      <CheckCircle2 className="h-3 w-3" />
+                      <CircleCheckBig className="h-3 w-3" />
                     ) : (
                       <span>⏱</span>
                     )}{" "}
@@ -561,8 +566,8 @@ export default function Home() {
             </h2>
 
             <div className="space-y-5">
-              <p className="flex items-center gap-2 text-base font-medium text-primary">
-                <CheckCircle2 className="h-5 w-5" /> Managers gain:
+              <p className="flex items-center gap-2 text-base font-medium text-foreground">
+                <CircleCheckBig className="h-5 w-5 text-primary" /> Managers gain:
               </p>
               <ul className="space-y-2 text-xl text-muted-foreground">
                 <li className="flex items-center gap-3 leading-relaxed">
