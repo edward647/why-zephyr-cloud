@@ -35,13 +35,13 @@ export default function Home() {
         <div className="mb-32 grid gap-20 lg:grid-cols-2">
           {/* Left: The Problem */}
           <div className="space-y-4">
-            <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
+            <h2 className="text-2xl font-medium leading-none tracking-tight lg:text-3xl">
               The Problem Managers Actually Face
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground">
               Engineering teams don't struggle with building software. They
               struggle with{" "}
-              <span className="font-semibold text-foreground">
+              <span className="font-normal text-foreground">
                 release coordination, rollback risk, and operational friction
               </span>{" "}
               as systems and teams scale.
@@ -95,12 +95,12 @@ export default function Home() {
 
           {/* Right: What Zephyr Changes */}
           <div className="space-y-4">
-            <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
+            <h2 className="text-2xl font-medium leading-none tracking-tight lg:text-3xl">
               What Zephyr Cloud Changes
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground">
               Zephyr Cloud is a{" "}
-              <span className="font-semibold text-foreground">
+              <span className="font-normal text-foreground">
                 managed deployment and release control platform
               </span>{" "}
               that removes the need for tight cross-team coordination—without
@@ -164,9 +164,9 @@ export default function Home() {
 
         {/* Edge Deployment Feature Box */}
         <div className="relative mb-32 overflow-hidden rounded-md border border-white/20 p-8 lg:p-12">
-          <h2 className="mb-4 text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
+          <h2 className="mb-4 text-2xl font-medium leading-none tracking-tight lg:text-3xl">
             Why Edge Deployment Matters
-            <span className="block text-2xl font-normal leading-relaxed text-foreground lg:text-3xl">
+            <span className="block text-2xl font-normal leading-none text-foreground lg:text-3xl">
               (Latency, Performance, User Experience)
             </span>
           </h2>
@@ -201,8 +201,7 @@ export default function Home() {
                 <ul className="space-y-1 text-base text-muted-foreground">
                   <li className="flex items-center gap-3 leading-relaxed">
                     <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-                    <span className="text-foreground">Ultra-low latency</span> by reducing round trips to centralized
-                    servers
+                    <span><span className="text-foreground">Ultra-low latency</span> by reducing round trips to centralized servers</span>
                   </li>
                   <li className="flex items-center gap-3 leading-relaxed">
                     <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
@@ -281,7 +280,7 @@ export default function Home() {
 
           {/* Right Column - Why Not Build In-House */}
           <div className="space-y-4">
-            <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
+            <h2 className="text-2xl font-medium leading-none tracking-tight lg:text-3xl">
               Why Not Build This In-House?
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground">
@@ -317,10 +316,11 @@ export default function Home() {
         {/* PAGE 2 CONTENT */}
 
         {/* Release Management & How Teams Use */}
-        <div className="mb-32 grid gap-20 lg:grid-cols-2">
+        <div className="relative mb-32 -mx-6 px-6 lg:-mx-12 lg:px-12">
+          <div className="grid gap-20 pt-8 lg:grid-cols-2">
           {/* Release Management */}
           <div className="space-y-4">
-            <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
+            <h2 className="text-2xl font-medium leading-none tracking-tight lg:text-3xl">
               Release Management & Risk
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground">
@@ -357,13 +357,13 @@ export default function Home() {
               deployed version already live at the edge.
             </p>
 
-            <div className="flex items-center gap-8">
+            <div className="mt-8 flex items-center gap-8">
               <img
                 src="/Release-mangement-risk.svg"
                 alt="Release management and risk visualization"
-                className="w-[55%] h-auto"
+                className="mt-8 w-[55%] h-auto"
               />
-              <div className="flex flex-col gap-4">
+              <div className="mt-12 flex flex-col gap-4">
                 <p className="text-base leading-relaxed">
                   Rollback in seconds, no rebuild needed.
                 </p>
@@ -379,7 +379,7 @@ export default function Home() {
 
           {/* How Teams Use Zephyr */}
           <div className="space-y-4">
-            <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
+            <h2 className="text-2xl font-medium leading-none tracking-tight lg:text-3xl">
               How Teams Use Zephyr
             </h2>
 
@@ -454,12 +454,13 @@ export default function Home() {
               </div>
             </div>
           </div>
+          </div>
         </div>
 
         {/* Enterprise Ready */}
         <div className="mb-32 grid gap-20 lg:grid-cols-2">
           <div className="space-y-4">
-            <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
+            <h2 className="text-2xl font-medium leading-none tracking-tight lg:text-3xl">
               Enterprise-Ready
               <span className="block">by Design</span>
             </h2>
@@ -525,7 +526,7 @@ export default function Home() {
               ].map((provider) => (
                 <div
                   key={provider.name}
-                  className="flex max-w-[419px] items-center justify-center rounded-lg border border-white/10 bg-card p-6"
+                  className="flex max-w-[503px] items-center justify-center rounded-lg border border-white/10 bg-card p-6"
                 >
                   <div className="flex min-h-[140px] w-[180px] flex-col items-center justify-center gap-4 rounded-md p-6">
                     <img
@@ -562,11 +563,10 @@ export default function Home() {
         </div>
 
         {/* The Manager Outcome */}
-        <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-background via-primary/5 to-background p-16 lg:p-24">
-          <div className="absolute right-16 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-primary/20 blur-3xl" />
-
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-background via-primary/5 to-background p-16 lg:p-24">
           <div className="relative space-y-10">
-            <h2 className="text-2xl font-medium leading-tight tracking-tight lg:text-3xl">
+            <img src="/Increase.svg" alt="Performance increase visualization" className="absolute right-0 top-24 w-[461px] h-auto" />
+            <h2 className="text-2xl font-medium leading-none tracking-tight lg:text-3xl">
               The Manager
               <span className="block">Outcome</span>
             </h2>
@@ -575,31 +575,31 @@ export default function Home() {
               <p className="flex items-center gap-2 text-base font-medium text-foreground">
                 <CircleCheckBig className="h-5 w-5 text-primary" /> Managers gain:
               </p>
-              <ul className="space-y-2 text-xl text-muted-foreground">
-                <li className="flex items-center gap-3 leading-relaxed">
+              <ul className="space-y-1 text-base text-muted-foreground">
+                <li className="flex items-center gap-3">
                   <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Faster, more predictable releases
                 </li>
-                <li className="flex items-center gap-3 leading-relaxed">
+                <li className="flex items-center gap-3">
                   <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Lower rollback and outage risk
                 </li>
-                <li className="flex items-center gap-3 leading-relaxed">
+                <li className="flex items-center gap-3">
                   <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Less coordination overhead
                 </li>
-                <li className="flex items-center gap-3 leading-relaxed">
+                <li className="flex items-center gap-3">
                   <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Teams that scale without slowing delivery
                 </li>
-                <li className="flex items-center gap-3 leading-relaxed">
+                <li className="flex items-center gap-3">
                   <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
                   Reduced long-term operational cost vs. custom tooling
                 </li>
               </ul>
             </div>
 
-            <div className="space-y-5 pt-4">
+            <div className="space-y-0 pt-4">
               <p className="text-base leading-relaxed">
                 Zephyr doesn&apos;t change how teams build.
               </p>
@@ -608,18 +608,20 @@ export default function Home() {
               </p>
             </div>
 
-            <a
-              href="#"
-              className="inline-flex items-center gap-1 text-base font-medium text-primary hover:underline"
-            >
-              Learn more <ArrowRight className="h-4 w-4" />
-            </a>
+            <div className="flex items-end justify-between -mt-4">
+              <a
+                href="#"
+                className="inline-flex items-center gap-1 text-base font-medium text-primary hover:underline"
+              >
+                Learn more <ArrowRight className="h-4 w-4" />
+              </a>
 
-            <p className="pt-12 text-right text-base leading-relaxed text-muted-foreground">
-              Purpose-built for enterprise release velocity
-              <br />
-              and risk reduction.
-            </p>
+              <p className="text-right text-base leading-relaxed text-muted-foreground">
+                Purpose-built for enterprise release velocity
+                <br />
+                and risk reduction.
+              </p>
+            </div>
           </div>
         </div>
       </div>
