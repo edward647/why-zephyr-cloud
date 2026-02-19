@@ -236,7 +236,7 @@ export default function Home() {
           </div>
 
           {/* Globe positioned at bottom right */}
-          <div className="absolute bottom-0 right-0 w-[45%] pb-0 pl-8 pr-8 pt-8">
+          <div className="absolute bottom-0 -right-8 w-[49%]">
             <img
               src="/Globe.svg"
               alt="Global edge deployment network"
