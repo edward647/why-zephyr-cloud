@@ -238,7 +238,7 @@ export default function HomePage() {
           {/* Globe positioned at bottom right */}
           <div className="absolute bottom-0 -right-8 w-[49%]">
             <img
-              src="/Globe.svg"
+              src="/globe.svg"
               alt="Global edge deployment network"
               className="w-full h-auto"
             />
@@ -249,17 +249,22 @@ export default function HomePage() {
         <div className="mb-32 grid gap-20 lg:grid-cols-2 lg:items-start">
           {/* Left Column - Command and Description */}
           <div className="space-y-4">
-            <div className="rounded-lg border border-white/10 bg-[#171717] p-4 space-y-4">
-              <code className="flex items-center gap-2 font-mono text-base">
+            <div
+              className="rounded-lg border border-white/10 bg-[#171717] p-4 space-y-4 cursor-pointer hover:border-white/20 transition-colors"
+              onClick={() => {
+                navigator.clipboard.writeText('npx create-zephyr-apps@latest');
+              }}
+            >
+              <code className="flex items-center gap-2 font-mono text-base pointer-events-none">
                 <Terminal className="h-5 w-5 text-primary" />
                 <span className="text-muted-foreground">$</span> npx
                 create-zephyr-apps@latest
               </code>
 
-              <button className="flex items-center gap-2 font-mono text-sm text-muted-foreground hover:text-foreground cursor-pointer">
+              <div className="flex items-center gap-2 font-mono text-sm text-muted-foreground pointer-events-none">
                 <Copy className="h-4 w-4" />
-                press to copy
-              </button>
+                click to copy
+              </div>
             </div>
 
             <p className="text-base leading-relaxed">
