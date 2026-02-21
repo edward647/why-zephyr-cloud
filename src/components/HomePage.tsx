@@ -276,7 +276,7 @@ export default function HomePage() {
             </p>
 
             <a
-              href="#"
+              href="https://docs.zephyr-cloud.io/reference/architecture?utm_source=chatgpt.com"
               className="inline-flex items-center gap-1 text-base font-medium text-primary hover:underline"
             >
               Learn more <ArrowRight className="h-4 w-4" />
@@ -315,6 +315,13 @@ export default function HomePage() {
                 </li>
               </ul>
             </div>
+
+            <a
+              href="https://docs.zephyr-cloud.io/reference/why-zephyr-cloud"
+              className="inline-flex items-center gap-1 text-base font-medium text-primary hover:underline"
+            >
+              Learn more <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
         </div>
 
@@ -373,7 +380,7 @@ export default function HomePage() {
                   Rollback in seconds, no rebuild needed.
                 </p>
                 <a
-                  href="#"
+                  href="https://docs.zephyr-cloud.io/reference/architecture?utm_source=chatgpt.com"
                   className="inline-flex items-center gap-1 text-base font-medium text-primary hover:underline"
                 >
                   Learn more <ArrowRight className="h-4 w-4" />
@@ -433,16 +440,16 @@ export default function HomePage() {
               No new approval chains. No additional release meetings.
             </p>
 
-            <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
-              <div className="rounded-xl border border-border bg-gradient-to-br from-primary/5 via-card to-card p-8">
+            <div className="grid gap-8 lg:grid-cols-[auto_1fr] lg:items-start">
+              <div className="mt-12">
                 <img
                   src="/How-teams-use-zephyr.svg"
                   alt="Dashboard UI showing how teams use Zephyr"
-                  className="w-full h-auto"
+                  className="w-auto h-auto max-w-[221px]"
                 />
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-4 mt-12">
                 <p className="text-base text-muted-foreground">
                   Zephyr provides both{" "}
                   <span className="font-normal text-foreground">
@@ -451,7 +458,7 @@ export default function HomePage() {
                   so teams can work how they want.
                 </p>
                 <a
-                  href="#"
+                  href="https://docs.zephyr-cloud.io/reference/architecture?utm_source=chatgpt.com"
                   className="inline-flex items-center gap-1 text-base font-medium text-primary hover:underline"
                 >
                   Learn more <ArrowRight className="h-4 w-4" />
@@ -558,7 +565,7 @@ export default function HomePage() {
               <span className="font-semibold text-foreground">BYOC:</span> Bring
               your infrastructure, keep control.{" "}
               <a
-                href="#"
+                href="https://docs.zephyr-cloud.io/cloud/akamai"
                 className="inline-flex items-center gap-1 text-base font-medium text-primary hover:underline"
               >
                 Learn more <ArrowRight className="h-4 w-4" />
@@ -615,7 +622,7 @@ export default function HomePage() {
 
             <div className="flex items-end justify-between -mt-4">
               <a
-                href="#"
+                href="https://docs.zephyr-cloud.io/reference/why-zephyr-cloud"
                 className="inline-flex items-center gap-1 text-base font-medium text-primary hover:underline"
               >
                 Learn more <ArrowRight className="h-4 w-4" />
