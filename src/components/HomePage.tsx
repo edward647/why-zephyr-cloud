@@ -534,7 +534,7 @@ export default function HomePage() {
                 { name: "Netlify", status: "Available", logo: "/Netlify.svg" },
                 { name: "Akamai", status: "Available", logo: "/Akamai.svg" },
                 { name: "AWS", status: "Available", logo: "/AWS.svg" },
-                { name: "Vercel", status: "Coming soon", logo: "/Vercel.svg" },
+                { name: "Vercel", status: "Coming soon", logo: "/vercel.svg" },
               ].map((provider) => (
                 <div
                   key={provider.name}
